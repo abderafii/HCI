@@ -72,3 +72,7 @@ Aids to display PDFs in your React app as easily as if they were images.
 ### pdf-lib
 Supports modification (editing) of existing documents.
 [Chek it out here](https://pdf-lib.js.org/)
+
+### Recognition
+Web-based real-time hand gesture recognition with React.js, Tensorflow.js and Fingerpose
+[Chek it out here](https://github.com/Johnsuuuu/gesture-recognition)

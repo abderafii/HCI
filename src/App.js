@@ -15,7 +15,7 @@ export default function App() {
   const [isText, setIsText] = useState(false);
   const [pdfFile, setPdfFile] = useState(samplePDF); // State to store current PDF
   const [buttonType, setButtonType] = useState("");
-  const [pdfDimensions, setPdfDimensions] = useState({ width: 612, height: 844 });
+  const [pdfDimensions, setPdfDimensions] = useState({ width: 612, height: 792 });
   const [selectedColor, setSelectedColor] = useState("#000000"); // Default color is black
   const tempRef = useRef(null);
 
