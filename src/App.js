@@ -15,7 +15,7 @@ export default function App() {
   const [isText, setIsText] = useState(false);
   const [pdfFile, setPdfFile] = useState(samplePDF); // State to store current PDF
   const [buttonType, setButtonType] = useState("");
-  const [pdfDimensions, setPdfDimensions] = useState({ width: 612, height: 792 });
+  const [pdfDimensions, setPdfDimensions] = useState({ width: 720, height: 405 });
   const [selectedColor, setSelectedColor] = useState("#000000"); // Default color is black
   const tempRef = useRef(null);
 
@@ -189,7 +189,7 @@ export default function App() {
       <button onClick={addText} style = {{marginTop: "1%"}}>Add Text</button>*/}
       <SinglePage resetButtonType={resetButtonType} buttonType={buttonType} cursor={isText ? "text" : "default"} pdf={pdfFile} pageChange={pageChange} getPaths={getPaths} flag={flag} getBounds={getBounds} changeFlag={changeFlag} pdfDimensions={pdfDimensions} hex={selectedColor} />
       <ModifyPage resetButtonType={resetButtonType} buttonType={buttonType} pdf={pdfFile} result={result} bounds={bounds} hex={selectedColor} />
-      <hr style={{marginTop: "150px"}}></hr>
+      <hr></hr>
 
     </div>
   );
