@@ -1,14 +1,17 @@
 {
-  "name": "pdf-view",
+  "name": "leapmotion-presenter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tensorflow-models/handpose": "0.0.7",
+    "@tensorflow/tfjs": "^3.12.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.31",
     "@fortawesome/free-solid-svg-icons": "^5.15.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "fingerpose": "^0.1.0",
     "immutable": "^4.0.0-rc.12",
     "jquery": "^3.5.1",
     "leapjs": "^0.6.4",
@@ -19,6 +22,7 @@
     "react-draggable": "^4.4.3",
     "react-pdf": "^4.2.0",
     "react-scripts": "^3.4.3",
+    "react-webcam": "^6.0.0",
     "use-resize-observer": "^6.1.0"
   },
   "scripts": {

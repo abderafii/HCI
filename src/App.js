@@ -156,7 +156,7 @@ export default function App() {
         })
       }
 
-      <h1 style={{ color: "#3f51b5" }}>REACT PDF EDITOR</h1>
+      <h1 style={{ color: "#3f51b5" }}>Leap Motion Presenter</h1>
 
       <hr />
       {/* File input for uploading PDF */}
@@ -189,7 +189,7 @@ export default function App() {
       <button onClick={addText} style = {{marginTop: "1%"}}>Add Text</button>*/}
       <SinglePage resetButtonType={resetButtonType} buttonType={buttonType} cursor={isText ? "text" : "default"} pdf={pdfFile} pageChange={pageChange} getPaths={getPaths} flag={flag} getBounds={getBounds} changeFlag={changeFlag} pdfDimensions={pdfDimensions} hex={selectedColor} />
       <ModifyPage resetButtonType={resetButtonType} buttonType={buttonType} pdf={pdfFile} result={result} bounds={bounds} hex={selectedColor} />
-      <hr></hr>
+      <hr style={{marginTop: "150px"}}></hr>
 
     </div>
   );

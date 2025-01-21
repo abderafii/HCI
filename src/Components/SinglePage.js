@@ -7,9 +7,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 export default function SinglePage(props) {
 
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1); 
-  const [bounds, setBounds] = useState({ x: 0, y: 0, width: 0, height: 0 });
-  
+  const [pageNumber, setPageNumber] = useState(1);   
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -19,12 +17,6 @@ export default function SinglePage(props) {
   useEffect(()=>{
     props.pageChange(pageNumber);    
   });
-
-  const handleGetBounds = (newBounds) => {
-    setBounds(newBounds); // Update local state with new bounds
-    props.getBounds(newBounds); // Pass updated bounds to parent
-    console.log("Updated Drawable Area Bounds:", newBounds);
-  };
 
   function changePage(offset) {
     setPageNumber(prevPageNumber => prevPageNumber + offset);
@@ -53,7 +45,7 @@ export default function SinglePage(props) {
         onLoadError={()=>console.log("ERR")}
       >
       
-      <DrawArea getPaths = {props.getPaths} page = {pageNumber} flag = {props.flag} getBounds = {handleGetBounds} changeFlag = {props.changeFlag} cursor = {props.cursor} buttonType = {props.buttonType} resetButtonType = {props.resetButtonType} pdfDimensions={props.pdfDimensions} hex={props.hex}>
+      <DrawArea getPaths = {props.getPaths} page = {pageNumber} flag = {props.flag} getBounds = {props.bounds} changeFlag = {props.changeFlag} cursor = {props.cursor} buttonType = {props.buttonType} resetButtonType = {props.resetButtonType} pdfDimensions={props.pdfDimensions} hex={props.hex}>
       <Page 
             pageNumber={pageNumber}
           />
